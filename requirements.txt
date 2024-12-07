@@ -1,0 +1,9 @@
+Flask
+Flask-SQLAlchemy
+SQLAlchemy
+flask-static-compress
+flask==3.0.1
+gunicorn
+numpy
+requests
+werkzeug==3.0.1
