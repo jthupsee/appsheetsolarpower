@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="icon" href="https://storage.googleapis.com/lazy-icons/not-found-placeholder.webp" type="image/x-icon">
+    <title>App Name</title>
+  </head>
+  <body>
+    {% include 'partials/_header.html' %}
+    <div class="main-content">
+      <div class="text-center py-10">
+        <h1 class="text-3xl font-bold mb-8">Mauritius Solar Power Monitor</h1>
+        <div class="last-updated mb-4">
+          Last Updated: <span id="lastUpdated"></span>
+          <button id="refreshButton" class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Refresh Data
+          </button>
+        </div>
+        <div id="locationGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+          <!-- Location cards will be inserted here -->
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/home.js"></script>
+  </body>
+</html>
