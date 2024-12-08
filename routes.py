@@ -22,17 +22,17 @@ logger = logging.getLogger(__name__)
 
 # Location definitions
 LOCATIONS = {
-    'Le Bocage': {'lat': -20.2, 'lng': 57.5},
+    'le-bocage-934365': {'lat': -20.2, 'lng': 57.5},
     'Curepipe': {'lat': -20.3162, 'lng': 57.5166},
     'Mahebourg': {'lat': -20.4081, 'lng': 57.7},
     'Henrietta': {'lat': -20.2344, 'lng': 57.4761},
     'Bambous': {'lat': -20.2667, 'lng': 57.4000},
     'Triolet': {'lat': -20.0589, 'lng': 57.5506},
     'Laventure': {'lat': -20.1667, 'lng': 57.6667},
-    'Queen Victoria': {'lat': -20.2167, 'lng': 57.4833},
-    'Bel Air Riviere Sèche': {'lat': -20.2583, 'lng': 57.7500},
-    'Cap Malheureux': {'lat': -19.9833, 'lng': 57.6167},
-    'Le Morne': {'lat': -20.4500, 'lng': 57.3167}
+    'Queen-Victoria': {'lat': -20.2167, 'lng': 57.4833},
+    'bel-air-riviere-seche': {'lat': -20.2583, 'lng': 57.7500},
+    'cap-malheureux-934318': {'lat': -19.9833, 'lng': 57.6167},
+    'le-morne-7911318': {'lat': -20.4500, 'lng': 57.3167}
 }
 
 def get_solar_wind_data():
@@ -52,7 +52,8 @@ def get_solar_wind_data():
     }
 
 def get_weather_data(location):
-    api_url = f"https://www.meteosource.com/api/v1/free/point?place_id={location}&sections=all&timezone=UTC&language=en&units=metric&key=u7mmlfv3tjgmk0c1lqj28ls7cv5xmtip7z3c"
+    api_url = f"https://www.meteosource.com/api/v1/free/point?place_id={location}&sections=all&timezone=UTC&language=en&units=metric&key=u7mmlfv3tjgmk0c1lqj28ls7fl87cv5xmtip7z3c"
+    print (api_url)
     response = requests.get(api_url)
     if response.status_code != 200:
         raise Exception(f"Failed to fetch weather data for {location}")
